@@ -1,5 +1,5 @@
 const dynamicText = document.getElementById("dynamic_words");
-const words = ["Web Developer", "Work-Program Designer", "Smart Office-Space Engineer"];
+const words = ["Web Developer", "Work-Program Designer", "Automation Engineer"];
 
 // Variables to track the position and deletion status of the word
 let wordIndex = 0;
