@@ -1,6 +1,13 @@
 const dynamicText = document.getElementById("dynamic_words");
 const words = ["Web Developer", "Work-Program Designer", "Automation Engineer"];
 
+
+window.addEventListener('load' , function(){
+    document.getElementById("preloader").style.display = "none";
+});
+
+
+
 // Variables to track the position and deletion status of the word
 let wordIndex = 0;
 let charIndex = 0;
