@@ -13,7 +13,7 @@ let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 
-const typeEffect = () => {
+const type_effect = () => {
     const currentWord = words[wordIndex];
     const currentChar = currentWord.substring(0, charIndex);
     dynamicText.textContent = currentChar;
@@ -22,11 +22,11 @@ const typeEffect = () => {
     if (!isDeleting && charIndex < currentWord.length) {
         // If condition is true, type the next character
         charIndex++;
-        setTimeout(typeEffect, 200);
+        setTimeout(type_effect, 200);
     } else if (isDeleting && charIndex > 0) {
         // If condition is true, remove the previous character
         charIndex--;
-        setTimeout(typeEffect, 100);
+        setTimeout(type_effect, 100);
     } else {
         // If word is deleted then switch to the next word
         isDeleting = !isDeleting;
@@ -34,8 +34,8 @@ const typeEffect = () => {
         if (!isDeleting) {
             wordIndex = (wordIndex + 1) % words.length; // Go to the next word, wrap around to first word
         }
-        setTimeout(typeEffect, 1200);
+        setTimeout(type_effect, 1200);
     }
 }
 
-typeEffect();
+type_effect();
